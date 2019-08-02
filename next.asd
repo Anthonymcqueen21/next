@@ -10,6 +10,7 @@
   :depends-on (:alexandria
                :bordeaux-threads
                :cl-css
+               :cl-fad
                :cl-json
                :cl-markup
                :cl-ppcre
@@ -63,6 +64,7 @@
                  (:file "proxy-mode")
                  (:file "noscript-mode")
                  (:file "download-mode")
+                 (:file "file-manager-mode")
                  ;; About
                  (:file "about")
                  ;; Port Compatibility Layers
