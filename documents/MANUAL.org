@@ -460,12 +460,13 @@ The default keybindings for ~vi-normal-mode~ are:
 The commands  =open-file= and  =download-open-file= call  the function
 =open-file-fn <filename>=. Its  default behaviour is to  open the file
 with the  system's default, using  =xdg-open=.  You can  override this
-behaviour by re-defining this function.
+behaviour   by    binding   another    function   to    the   variable
+=next:*open-file-fn*=.
 
 For example:
 
 #+begin_src lisp
-(defun open-file-fn (filename)
+(defun my-open-videos (filename)
   "Open videos with `mpv'."
   (handler-case (let ((extension (pathname-type filename)))
                   (cond
@@ -474,6 +475,8 @@ For example:
                     (t
                      (next::open-file-fn-default filename))))
     (error (c) (format *error-output* "Error opening pdf ~a: ~a" filename c))))
+
+(setf next:*open-file-fn* #'my-open-videos)
 #+end_src
 
 ** Loading Files

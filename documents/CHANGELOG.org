@@ -71,8 +71,9 @@ Press =Enter= to visit a file, =C-l=  to go one directory up, =C-j= to
 browse the directory at point.
 
 By default, it uses the =xdg-open=  command. The user can override the
-=next:open-file-fn= function,  which takes the filename  (or directory
-name) as parameter. See the manual for an example.
+=next:*open-file-fn*= variable  with a new function,  which takes the
+filename  (or directory  name) as  parameter.  See the  manual for  an
+example.
 
 The default keybinding is =C-x C-f=.
 

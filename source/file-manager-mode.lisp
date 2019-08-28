@@ -30,6 +30,10 @@
 (defvar *current-directory* download-manager::*default-download-directory*
   "Default directory to open files from. Defaults to the downloads directory.")
 
+(export '*open-file-fn*)   ;; the user is encouraged to override this in her init file.
+(defparameter *open-file-fn* #'open-file-fn
+  "Function triggered to open files.")
+
 (defun open-file-fn-default (filename)
   "Open this file with `xdg-open'."
   (handler-case (uiop:run-program (list "xdg-open" (namestring filename)))
@@ -40,9 +44,9 @@
 ;; "open-file-function" into a download-mode slot, which is then called from
 ;; `download-open-file' with `(funcall (open-file-function download-mode)
 ;; filename).
-(export 'open-file)  ;; the user is encouraged to override this in her init file.
 (defun open-file-fn (filename)
-  "Open this file. `filename' is the full path of the file (or directory), as a string.
+  "Open `filename'.
+`filename' is the full path of the file (or directory), as a string.
 By default, try to open it with the system's default external program, using `xdg-open'.
 The user can override this function to decide what to do with the file."
   (open-file-fn-default filename))
