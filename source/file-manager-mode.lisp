@@ -11,7 +11,7 @@
 ;;; - open files. By default, with xdg-open. See `open-file-fn'.
 ;;;
 ;;; ***********************************************************************
-;;; *disclaimer*: this feature is meant to grow with Next 1.4 and onwards !
+;;; *Disclaimer*: this feature is meant to grow with Next 1.4 and onwards!
 ;;; ***********************************************************************
 ;;;
 ;;; Much can be done:
