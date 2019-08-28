@@ -474,7 +474,7 @@ For example:
                      (uiop:run-program (list "mpv" filename)))
                     (t
                      (next::open-file-fn-default filename))))
-    (error (c) (format *error-output* "Error opening pdf ~a: ~a" filename c))))
+    (error (c) (log:error "Error opening pdf ~a: ~a" filename c))))
 
 (setf next:*open-file-fn* #'my-open-videos)
 #+end_src
