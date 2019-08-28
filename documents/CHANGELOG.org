@@ -67,8 +67,8 @@ The user is prompted with the minibuffer, files are browsable with the fuzzy com
 
 The default directory is the one from the download manager.
 
-Press =Enter= to visit a file, =C-l=  to go one directory up, =C-j= to
-browse the directory at point.
+Press =Enter= to  visit a file, =M-Left= or =C-l=  to go one directory
+up, =M-Right= or =C-j= to browse the directory at point.
 
 By default, it uses the =xdg-open=  command. The user can override the
 =next:*open-file-fn*= variable  with a new function,  which takes the

@@ -81,8 +81,8 @@ fuzzy completion.
 The default directory is the one computed by
 `download-manager:default-download-directory' (certainly `~/Downloads').
 
-Press `Enter' to visit a file, `C-l' to go one directory up, `C-j' to
-browse the directory at point.
+Press `Enter' to visit a file, `M-Left' or `C-l' to go one directory
+up, `M-Right' or `C-j' to browse the directory at point.
 
 By default, it uses the `xdg-open' command. The user can override the
 `next:open-file-fn' function, which takes the filename (or directory
@@ -101,6 +101,10 @@ Note: this feature is alpha, get in touch for more !"
 
 
 (define-key  "C-x C-f" #'open-file)
+(define-key :mode 'vi-normal-mode  "e" #'open-file) ;TODO:
 
 (define-key :mode 'minibuffer-mode  "C-l" #'display-parent-directory)
+(define-key :mode 'minibuffer-mode  "M-Left" #'display-parent-directory)
+
 (define-key :mode 'minibuffer-mode  "C-j" #'enter-directory)
+(define-key :mode 'minibuffer-mode  "M-Right" #'enter-directory)

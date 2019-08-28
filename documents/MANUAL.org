@@ -271,8 +271,8 @@ section to control how files are open.
 
 With =M-x open-file= (bound to =C-x  C-f=), you are prompted a list of
 files, and you can select one with the usual fuzzy completion. You can
-go one directory up with =C-l=,  and enter the directory at point with
-=C-j=.
+go one directory  up with =M-Left= or =C-l=, and  enter the directory
+at point with =M-Right= or =C-j=.
 
 Next  will open  the  file  with the  system's  default program  using
 =xdg-open=.  See  the  command  help  for  further  details,  and  the
