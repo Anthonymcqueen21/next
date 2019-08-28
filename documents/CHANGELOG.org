@@ -59,7 +59,7 @@ MAJOR.MINOR.PATCH, we increment the:
 
 ** TASK 1.3.1 (Upcoming)
 
-*** New M-x open-file command (C-x C-f)
+*** New command: open-file (C-x C-f)
 
 This new command allows to open a file from the filesystem.
 
@@ -78,7 +78,7 @@ The default keybinding is =C-x C-f=.
 
 __Note__: this feature is alpha and is meant to grow in Next 1.4 and beyond!
 
-*** New command: M-x download-open-file
+*** New command: download-open-file
 
 Open a recently downloaded file.
 
