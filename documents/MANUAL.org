@@ -16,6 +16,7 @@ end-user allowing for infinite customization.
   - [[#history][History]]
   - [[#bookmarks][Bookmarks]]
   - [[#download-manager][Download manager]]
+  - [[#opening-files][Opening files]]
   - [[#clearing-the-echo-area][Clearing the Echo Area]]
   - [[#exiting][Exiting]]
   - [[#proxy-and-tor-support][Proxy and Tor support]]
@@ -265,6 +266,19 @@ as usual, and also with =M-x download-list=.
 
 To open  a file, use  =M-x download-open-file=. See  the customization
 section to control how files are open.
+
+** Opening files
+
+With =M-x open-file= (bound to =C-x  C-f=), you are prompted a list of
+files, and you can select one with the usual fuzzy completion. You can
+go one directory up with =C-l=,  and enter the directory at point with
+=C-j=.
+
+Next  will open  the  file  with the  system's  default program  using
+=xdg-open=.  See  the  command  help  for  further  details,  and  the
+customization section to override the default behavior.
+
+__Note__: this feature is alpha and is meant to grow in Next 1.4 and onwards.
 
 ** Clearing the Echo Area
 In the area at the bottom of the screen where the minibuffer resides,
