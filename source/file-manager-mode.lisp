@@ -75,13 +75,18 @@ Default keybinding: `C-j'. "
 (define-command open-file (root-mode &optional (interface *interface*))
   "Open a file from the filesystem.
 
-The user is prompted with the minibuffer, files are browsable with the fuzzy completion.
+The user is prompted with the minibuffer, files are browsable with the
+fuzzy completion.
 
-The default directory is the one from `next/download-manager::*default-download-directory*' (which is `~/Downloads' by default).
+The default directory is the one computed by
+`download-manager:default-download-directory' (certainly `~/Downloads').
 
-Press `Enter' to visit a file, `C-l' to go one directory up, `C-j' to browse the directory at point.
+Press `Enter' to visit a file, `C-l' to go one directory up, `C-j' to
+browse the directory at point.
 
-By default, it uses the `xdg-open' command. The user can override the `next:open-file-fn' function, which takes the filename (or directory name) as parameter.
+By default, it uses the `xdg-open' command. The user can override the
+`next:open-file-fn' function, which takes the filename (or directory
+name) as parameter.
 
 The default keybinding is `C-x C-f'.
 
